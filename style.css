@@ -291,7 +291,7 @@ nav .logo-l:hover{
 @media screen and (max-width: 768px){
     body{
         overflow-x: hidden;
-        overflow: hidden;
+
     }
     nav{
         bottom: 0;
@@ -351,6 +351,7 @@ nav .logo-l:hover{
     .illusTop , .illusBottom{
         width: 280px;
         right: -120px;
+        overflow-x: hidden;
     }
     .illusBottom{
         bottom: 6vh;
