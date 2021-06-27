@@ -18,7 +18,7 @@
 }
 body{
     background-color: var(--dark);
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 body a{
     text-decoration: none;
@@ -30,8 +30,8 @@ svg{
 }
 .illusTop{
     position: absolute;
-    top: -40px;
-    right: -240px;
+    right: -40px;
+    top: -50px;
     transform: rotateZ(-40deg);
 }
 .illusBottom{
@@ -290,8 +290,7 @@ nav .logo-l:hover{
 }
 @media screen and (max-width: 768px){
     body{
-        overflow-x: hidden;
-
+        overflow-x: hidden !important;
     }
     nav{
         bottom: 0;
@@ -300,7 +299,6 @@ nav .logo-l:hover{
         height: 10vh;
         border-radius: 30px 30px 0 0;
         background-color: var(--dark);
-
     }
     .logo-l{
         display: none;
@@ -348,14 +346,12 @@ nav .logo-l:hover{
         width: 150px;
         font-size: 14px;
     }
-    .illusTop , .illusBottom{
-        width: 280px;
-        right: -120px;
-        overflow-x: hidden;
+    .illusTop{
+        width: 190px;
+        top: -80px;
     }
     .illusBottom{
-        bottom: 6vh;
-        right: -160px;
+        display: none !important;
     }
     .blank-space{
         height: 30vh;
