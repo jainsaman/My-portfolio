@@ -15,9 +15,9 @@ let tl = gsap.timeline({ defaults: {
 }})
 tl.to('svg', { display: 'block', opacity: 1, duration: 4, delay: 1,
     repeat: 0 })
-    .to('#b-1',{ x: '180px', duration: .6 } , '-=5')
-    .to('#b-2',{ x: '120px', duration: .8 } , '-=5')
-    .to('#b-3',{ x: '80px', duration: 1 } , '-=5')
+    .to('#b-1',{ x: '120px', duration: .6 } , '-=5')
+    .to('#b-2',{ x: '80px', duration: .8 } , '-=5')
+    .to('#b-3',{ x: '50px', duration: 1 } , '-=5')
     .to('#b-4',{ x: '80px', duration: 1 } , '-=5')
     .to('#b-5',{ x: '120px', duration: .8 } , '-=5')
     .to('#b-6',{ x: '180px', duration: .6 } , '-=5')
