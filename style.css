@@ -29,16 +29,21 @@ svg{
     opacity: 0;
 }
 .illusTop{
+    z-index: 1;
     position: absolute;
-    right: -40px;
-    top: -50px;
-    transform: rotateZ(-40deg);
+    left: 0px;
+    top: -50px; 
+    transform: rotateZ(-130deg);
 }
 .illusBottom{
     position: absolute;
-    bottom: -60px;
-    right: -240px;
-    transform: rotateZ(40deg);
+    bottom: -50px;
+    left: 0px;
+    transform: rotateZ(140deg);
+}
+.illusDark , .illusLight{
+    position: absolute;
+    display: none !important;
 }
 nav{
     width: 10vh;
@@ -52,6 +57,7 @@ nav{
     z-index: 90;
     position: fixed;
     margin-right: 30px;
+    background-color: var(--dark);
 }
 .navLinks{
     display: flex;
@@ -253,6 +259,18 @@ nav .logo-l:hover{
 .card3:hover .card3-inner{
     transform: rotateY(180deg);
 }
+.card4-back{
+    transform: translateY(0%) translateX(-100%);
+}
+.card2:hover .card4-back{
+    transform: translateX(0%);
+}
+.card6-back{
+    transform: translateY(0%) translateX(100%);
+}
+.card2:hover .card6-back{
+    transform: translateX(0%);
+}
 .project-cards{
     display: flex;
     flex-wrap: wrap;
@@ -329,6 +347,15 @@ nav .logo-l:hover{
         transform: scale(1.1);
         color: var(--darkBlue);
     }
+    .illusDark , .illusLight{
+        display: block !important;
+        right: 0;
+        width: 150px;
+        top: 10px;
+    }
+    .illusLight{
+        display: none !important;
+    }
     .hero{
         width: 100%;
     }
@@ -346,11 +373,7 @@ nav .logo-l:hover{
         width: 150px;
         font-size: 14px;
     }
-    .illusTop{
-        width: 190px;
-        top: -80px;
-    }
-    .illusBottom{
+    .illusTop , .illusBottom{
         display: none !important;
     }
     .blank-space{
@@ -372,7 +395,7 @@ nav .logo-l:hover{
         align-items: flex-start;
     }
     .card{
-        margin: 150px;
+        margin: 180px;
         margin-left: 0;
         margin-top: 20px;
         width: 150px;
