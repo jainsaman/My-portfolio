@@ -25,11 +25,11 @@ tl.to('svg', { display: 'block', opacity: 1, duration: 4, delay: 1,
 let tl1 = gsap.timeline({ defaults: {
     opacity: 0
 }})
-tl1.from('.profile img', { duration: 2, delay: 1 })
+tl1.from('nav', {opacity: 0, duration: 2 })
+    .from('.profile img', { duration: 2, delay: 1 })
     .from('.heroText' , { y: '50%',color: "#dc1e1e" })
     .from('.btn1', {opacity: 0, duration: 0.2, x: '-50%' })
     .from('.btn2', {opacity: 0, duration: 0.2, x: '50%' })
-    .from('nav', {opacity: 0, duration: 1 })
 
 gsap.timeline({ scrollTrigger: {
     trigger: '.about',
