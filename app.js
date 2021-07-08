@@ -28,6 +28,7 @@ let tl1 = gsap.timeline({ defaults: {
 tl1.from('nav', {opacity: 0, duration: 2 })
     .from('.profile img', { duration: 2, delay: 1 })
     .from('.heroText' , { y: '50%',color: "#dc1e1e" })
+    .from('.heroDes' , { y: '50%' })
     .from('.btn1', {opacity: 0, duration: 0.2, x: '-50%' })
     .from('.btn2', {opacity: 0, duration: 0.2, x: '50%' })
 
@@ -35,8 +36,9 @@ gsap.timeline({ scrollTrigger: {
     trigger: '.about',
     start: '300px bottom',
     end: '-100px top'
-}}).from('.about .title', { x: '-100%', rotation: -60, opacity: 0,
-    duration: .7, })
+}}).from('.about .pseudoTitle', { y:'50%', opacity: 0, duration: 1 })
+    .from('.about .title', { x: '-100%', rotation: -60, opacity: 0,
+    duration: .7 })
     .from('.about-text h2', { y: '100%', rotation: -60, opacity: 0,
     duration: .7 })
     .from('.about-text p', { rotateX: '90deg', opacity: 0,
@@ -46,7 +48,8 @@ gsap.timeline({ scrollTrigger: {
     trigger: '.skills',
     start: '300px bottom',
     end: '-100px top'
-}}).from('.skills .title', { x: '-100%', rotation: -60, opacity: 0,
+}}).from('.skills .pseudoTitle', { y:'50%', opacity: 0, duration: 1 })
+    .from('.skills .title', { x: '-100%', rotation: -60, opacity: 0,
     duration: .7, })
     .from('.skill-cards .card', {x: '100%', opacity: 0, duration: .6,
     stagger: .3, scale: '0' })
@@ -55,7 +58,8 @@ gsap.timeline({ scrollTrigger: {
     trigger: '.projects',
     start: '300px bottom',
     end: '-100px top'
-}}).from('.projects .title', { x: '-100%', rotation: -60, opacity: 0,
+}}).from('.projects .pseudoTitle', { y:'50%', opacity: 0, duration: 1 })
+    .from('.projects .title', { x: '-100%', rotation: -60, opacity: 0,
     duration: .7 })
     .from('.project-cards .project-card', {y: '100%', opacity: 0, duration: .6, stagger: .3, })
 
@@ -63,7 +67,8 @@ gsap.timeline({ scrollTrigger: {
     trigger: '.contact',
     start: '100px bottom',
     end: '-200px top'
-}}).from('.contact .title', { x: '-100%', rotation: -60, opacity: 0,
+}}).from('.contact .pseudoTitle', { y:'50%', opacity: 0, duration: 1 })
+    .from('.contact .title', { x: '-100%', rotation: -60, opacity: 0,
     duration: .7 })
     .from('.contact-icons a span', { x: '-100%', opacity: 0, duration: .7,
     stagger: .2 }, '-=0.6')
