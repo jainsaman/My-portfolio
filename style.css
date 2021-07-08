@@ -1,13 +1,14 @@
 :root{
     --red: #dc1e1e;
     --yellow: #f0d10a;
-    --dark: #282828;
+    --dark: #1b1f22;
     --light: #f5f5f5;
     --lYellow: #e6be0a;
     --lBlue: #becde1;
     --blue: #6eaaff;
     --darkBlue: #3273d2;
     --fGlobal: 'Raleway', sans-serif;
+    --fHeadings: 'K2D', sans-serif;
 }
 *{
     padding: 0;
@@ -31,14 +32,14 @@ svg{
 .illusTop{
     z-index: 1;
     position: absolute;
-    left: 0px;
-    top: -50px; 
+    left: -50px;
+    top: 0px; 
     transform: rotateZ(-130deg);
 }
 .illusBottom{
     position: absolute;
     bottom: -50px;
-    left: 0px;
+    left: -50px;
     transform: rotateZ(140deg);
 }
 .illusDark , .illusLight{
@@ -46,10 +47,9 @@ svg{
     display: none !important;
 }
 nav{
-    width: 10vh;
-    height: 100vh;
+    width: 100%;
+    height: 10vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 2px 2px 8px #f5f5f520;
@@ -61,18 +61,21 @@ nav{
 }
 .navLinks{
     display: flex;
-    flex-direction: column;
-    height: 70vh;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    width: 80%;
 }
 .navText{
-    display: none;
-    transition: all 0.5s ease-in-out;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
 }
 .md-24{
     font-size: 24px;
+}
+.md-30{
+    font-size: 30px;
 }
 .md-36{
     font-size: 36px;
@@ -80,19 +83,14 @@ nav{
 .md-72{
     font-size: 72px;
 }
-.nav-link{
-    transition: all 200ms ease-in-out;
-}
 .nav-link:hover{
     color: var(--yellow);
-    transition: all 0.5s ease-in-out;
-}
-.nav-link:hover .navText{
-    display: block;
+    transition: all 0.3s ease-in-out;
 }
 nav .logo-l{
     position: absolute;
-    bottom: 40px;
+    bottom: 30%;
+    right: 50px;
     cursor: pointer;
     color: var(--light);
     transition: all 200ms ease-in;
@@ -108,27 +106,67 @@ nav .logo-l:hover{
     width: 100%;
     height: 100vh;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 220px;
+    padding-right: 220px;
+    padding-top: 10vh;
+}
+.heroContent{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 440px;
+    margin-top: 40px;
 }
 .profile img{
     width: 300px;
-    margin: 30px;
 }
 .heroText{
-    font-size: 40px;
-    font-weight: 700;
+    padding: 30px 50px;
+    margin-bottom: 60px;
+    width: 400px;
+    height: 120px;
+    box-shadow: inset 20px 20px 50px #0e1011 , inset -25px -25px 50px #292f33;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heroText svg{
+    display: block;
+    opacity: 1;
+    height: 42px;
+    width: 42px;
+}
+.heroName , .heroName h2{
+    font-family: var(--fHeadings);
+    font-weight: 600;
+    font-size: 20px;
+    color: #f5f5f580;
+}
+.heroName h2{
+    font-size: 34px;
     color: var(--light);
-    margin: 20px;
+}
+.heroDes{
+    font-family: var(--fHeadings);
+    color: var(--light);
+    font-size: 26px;
+    font-weight: 400;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 400px;
+    text-align: justify;
 }
 .heroBtns{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .heroBtns .btn{
-    width: 200px;
+    width: 180px;
     text-align: center;
     font-size: 24px;
     margin: 10px;
@@ -155,8 +193,16 @@ nav .logo-l:hover{
 }
 .about , .skills , .projects , .contact{
     width: 100%;
-    margin: 0 170px;
+    margin: 0 150px;
+    padding-right: 100px;
     word-wrap: break-word;
+    margin-top: 10vh;
+}
+.pseudoTitle{
+    font-size: 22px;
+    color: #becde170;
+    padding: 8px;
+    font-family: var(--fHeadings);
 }
 .title{
     font-size: 72px;
@@ -166,7 +212,7 @@ nav .logo-l:hover{
 .about-text{
     margin-top: 30px;
     width: 80%;
-    font-size: 30px;
+    font-size: 28px;
     color: var(--lBlue);
     font-weight: 500;
     text-align: justify;
@@ -313,8 +359,8 @@ nav .logo-l:hover{
     nav{
         bottom: 0;
         left: 0;
-        width: 100%;
-        height: 10vh;
+        width: 100% !important;
+        height: 10vh !important;
         border-radius: 30px 30px 0 0;
         background-color: var(--dark);
     }
@@ -329,9 +375,9 @@ nav .logo-l:hover{
     }
     .navText{
         display: block;
-        font-size: 14px;
+        font-size: 12px;
     }
-    .md-36{
+    .md-30{
         font-size: 24px;
     }
     .logo-m{
@@ -357,14 +403,39 @@ nav .logo-l:hover{
         display: none !important;
     }
     .hero{
+        height: auto;
         width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
     }
     .profile img{
         width: 180px;
         margin: 20px;
+        margin-top: 75px;
+    }
+    .heroContent{
+        width: 320px;
     }
     .heroText{
         font-size: 26px;
+        width: 280px;
+        padding: 30px 30px;
+    }
+    .heroText svg{
+        height: 38px;
+        width: 38px;
+    }
+    .heroName{
+        font-size: 18px;
+    }
+    .heroName h2{
+        font-size: 28px;
+    }
+    .heroDes{
+        width: 280px;
+        font-size: 22px;
     }
     .heroBtns{
         flex-direction: column;
@@ -380,9 +451,9 @@ nav .logo-l:hover{
         height: 30vh;
     }
     .about , .skills , .projects , .contact{
-        width: 100%;
-        margin: 0 10px;
-        margin-right: 10px;
+        width: 90%;
+        margin: 0 28px;
+        padding-right: 0;
     }
     .title{
         font-size: 48px;
